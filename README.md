@@ -3,17 +3,17 @@ Open Classroom project : AWS deployment
 
  Ce script a pour fonction le déploiement d’instances EC2 sur AWS avec une copie d’instantanés.
 ************************************************
-	-Création d’une paire de clef Amazon AWS CLI :
+	-Création d’une paire de clef Amazon AWS CLI:
 Commençons avec les commandes :
-# pip3 install awscli
-# pip3 install --user --upgrade awscli
+#pip3 install awscli
+#pip3 install --user --upgrade awscli
 
-Maintenant allons créer l’utilisateur sur AWS :
+Maintenant allons créer l’utilisateur sur AWS:
 https://console.aws.amazon.com/iam/home?#/users 
 Le compte crée doit avoir au minimum des droits administrateur sur « EC2FullAccess ». La création du compte faite sélectionnez l’utilisateur crée et cliquez sur download .csv (Ou, depuis le site récupérez les valeurs « Access Key ID » & « Secret access key »)
 
 Retournons sur le poste ansible, pour utiliser la commande 
-# aws configure
+#aws configure
 
 AWS Access Key ID [***************]: 
 AWS Secret Access Key [************]: 
@@ -22,10 +22,10 @@ Default output format [json]:
 
 Remplissez les champs, la région en pré-selection sur ce module est Paris (eu-west-3)
 
-Si vous avez une instance déjà ouverte, vous pouvez faire un test de fonctionnement avec la commande :
+Si vous avez une instance déjà ouverte, vous pouvez faire un test de fonctionnement avec la commande:
 #aws ec2 describe-instances
 
-Si la configuration est faire, je vous invit à faire un « export » des valeurs :
+Si la configuration est faire, je vous invit à faire un « export » des valeurs:
 
 #export AWS_ACCESS_KEY_ID=*******************
 #export AWS_SECRET_ACCESS_KEY=****************
