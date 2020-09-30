@@ -19,7 +19,7 @@ Retournons sur le poste ansible, pour utiliser la commande
 <pre><code>
 aws configure
 </code></pre>
-<pre><code>c
+<pre><code>
 AWS Access Key ID [***************]: 
 AWS Secret Access Key [************]: 
 Default region name [eu-west-3]: 
@@ -40,11 +40,11 @@ export AWS_SECRET_ACCESS_KEY=****************
 ************************************************
 ### Les variables du script :
 Dans le fichier Projet6.yml vous pouvez changer les variables en début de fichier :
-	-Instance_type : T2.micro Il s'agit de la taille du serveur loué, vous avez différents choix avec leurs performances propre).
-	-Security_group : Renseigne le compte utilisé pour la connexion sur AWS, il s'agit du compte crée avec la clef AWS CLI
-	-Image : Instantané de l’instance à dupliquer sur les nouvelles machines (Comme des Virtual Machine : Windows serveur 2016, Ubuntu apache …) la configuration de l’instantané est à réaliser manuellement avant l'éxécution du script.
-	-Region : eu-west-3  Vous pouvez choisir dans quelle région vos instances seront hébergés par AWS, ici nos machines sont hébergés sur Paris.
-	-Count : Défini le nombre d’instances à crées avec les configuration ci dessus. 
+	1.Instance_type : T2.micro Il s'agit de la taille du serveur loué, vous avez différents choix avec leurs performances propre).
+	2.-Security_group : Renseigne le compte utilisé pour la connexion sur AWS, il s'agit du compte crée avec la clef AWS CLI
+	3.Image : Instantané de l’instance à dupliquer sur les nouvelles machines (Comme des Virtual Machine : Windows serveur 2016, Ubuntu apache …) la configuration de l’instantané est à réaliser manuellement avant l'éxécution du script.
+	4.Region : eu-west-3  Vous pouvez choisir dans quelle région vos instances seront hébergés par AWS, ici nos machines sont hébergés sur Paris.
+	5.Count : Défini le nombre d’instances à crées avec les configuration ci dessus. 
 
 ************************************************
 ### Modifications et création de fichiers
