@@ -71,5 +71,7 @@ ansible-playbook -i /etc/ansible/hosts /etc/ansible/roles/AWS/Projet6,yml
 </code></pre>
 
 Crée par : PORTHA Xavier 
+
 Date de création : 29/09/2020
+
 Dernière modification : 30/09/2020
