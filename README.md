@@ -1,5 +1,6 @@
 # Projet6-OC
 Projet Open Classroom : Déploiement AWS
+
 *Ce script a pour fonction le déploiement d’instances EC2 sur AWS avec une copie d’instantanés.*
 ************************************************
 ## Prérequis :
