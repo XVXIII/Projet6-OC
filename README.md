@@ -77,3 +77,5 @@ Date de création : 29/09/2020
 Dernière modification : 30/09/2020
 
 Version 1.0
+
+Licence : Licence-MIT
