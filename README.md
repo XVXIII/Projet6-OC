@@ -67,15 +67,15 @@ Les adresses seront remontées automatiquement dans le fichier.
 
 ### lacement du module :
 <pre><code>
-ansible-playbook -i /etc/ansible/hosts /etc/ansible/roles/AWS/Projet6,yml 
+ansible-playbook -i /etc/ansible/hosts /etc/ansible/roles/AWS/Projet6.yml 
 </code></pre>
 
 Crée par : PORTHA Xavier 
 
 Date de création : 29/09/2020
 
-Dernière modification : 30/09/2020
+Dernière modification : 09/10/2020
 
-Version 1.0
+Version 1.1
 
 Licence : Licence-MIT
