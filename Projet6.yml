@@ -1,5 +1,12 @@
-## This script is made for automatize the deployment of EC2 instances on AWS
-## You must untag the single tagged line bellow and modify it with your own configuration
+## This script is made for automatize the deployment of EC2 instances on AWS.
+## Before running the script you must :
+## Had dowload and set the app awscli.
+## In your local hosts file add the line :
+## [
+## [local]
+## localhost ansible_connection=local ansible_python_interpreter=python3 
+## ]
+## Untag the single tagged line bellow and modify it with your own configuration.
 
 ---
   - name: Create EC2 instance
@@ -12,10 +19,16 @@
 #      instance_type: t2.micro
 #      security_group: Admin
 #      image: ami-095********
-#      keypair: awsp5
+#      keypair: awsp6
 #      region: eu-west-3
 #      count: 2
- 
+## Instance type : Is the model of the instance will be used by amazon for the deployment. 
+## Security group : Is the name of the group you made when you had configured AWS CLI. 
+## Image : "ami" file provided by amazon that work like .iso image.
+## Keypair : It's the SSH file you will use to acces the instance, you can genereta one on AWS website.
+## region : eu-west-3, for Paris, it's where your VM will be host.
+## count : It's the number of instances you will deploy with this configuration.
+
 ## Task that will be used to Launch/Create an EC2 Instance. There is basic firewall rules, you can add somes bellow.
     tasks:
  
@@ -57,7 +70,7 @@
 #        register: ec2_awsp6
  
       - name: Add the newly created EC2 instance(s) to the local host group
-## Set the log file to use :
+## Set the log file you will use for saving the list of the machines you had deployed :
         local_action: lineinfile 
                      # path=/mypath/to/logfile.txt
                       regexp={{ item.public_ip }} 
@@ -70,6 +83,7 @@
           groupname: launched
 #        with_items: "{{ ec2_awsp6.instances }}"
  
+ ## We will start the instance  
       - name: Let's wait for SSH to come up. Usually that takes ~10 seconds
         local_action: wait_for 
                       host={{ item.public_ip }} 
