@@ -65,7 +65,7 @@ name: Add the newly created EC2 instance(s) to the local host group
 Les adresses seront remontées automatiquement dans le fichier.
 (il est nécéssaire de faire un « chmod » sur le fichier log pour permettre à ansible la modification de celui-ci)
 
-### lacement du module :
+### lancement du module :
 <pre><code>
 ansible-playbook -i /etc/ansible/hosts /etc/ansible/roles/AWS/Projet6.yml 
 </code></pre>
